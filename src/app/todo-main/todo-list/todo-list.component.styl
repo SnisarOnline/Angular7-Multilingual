@@ -1,0 +1,41 @@
+.todo-list {
+  width: 600px;
+
+  .todo-item {
+    .checkbox {
+      margin-right: .25em;
+    }
+    .actions {
+      margin-left: auto;
+      opacity: 0;
+      transition: all .2s;
+      .open-todo{
+        float: left;
+        padding: 4px 4px 1px 4px;
+        color: #757575;
+        &:hover {
+          background-color: rgba(158,158,158,0.2);
+          border-radius: 50%;
+          padding: 4px 4px 1px 4px;
+        }
+      }
+    }
+
+    &:hover .actions {
+      opacity: 1;
+    }
+
+  }
+
+
+  .todo-item-completed{
+    .title {
+      text-decoration: line-through;
+    }
+    .title,.material-icons {
+      color: lightgray;
+    }
+  }
+}
+
+

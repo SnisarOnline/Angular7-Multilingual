@@ -1,0 +1,27 @@
+<mat-card>
+  <form class="todo-form" [formGroup]="objectFormGroup" (ngSubmit)="createTasks()" >
+
+    <mat-form-field>
+      <input matInput
+             formControlName="newTodoTitle"
+             [placeholder]="'PROJECT.FORM.Name' | translate"
+      >
+    </mat-form-field>
+
+
+    <mat-form-field>
+      <input matInput
+             formControlName="newTodoBody"
+             [placeholder]="'PROJECT.FORM.Description' | translate"
+      >
+    </mat-form-field>
+
+
+    <button mat-raised-button
+            color="primary"
+            [disabled]="!objectFormGroup.valid"
+    >
+      <i class="material-icons">playlist_add</i>
+    </button>
+  </form>
+</mat-card>

@@ -1,0 +1,21 @@
+{
+  "HELLO": "Hello",
+  "HEADER": {
+    "title":"Translations and Multi-language",
+    "btn": "Sign out"
+  },
+  "FOOTER": {
+    "title":"Translations and Multi-language"
+  },
+  "LOGIN": {
+    "sign_in": "Sign in {{value}}",
+    "sign_out": "Sign out {{value}}"
+  },
+  "PROJECT": {
+    "FORM": {
+      "Name":"Task title",
+      "Description":"Description of task"
+    },
+    "BODY":"null"
+  }
+}

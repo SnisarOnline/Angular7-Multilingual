@@ -1,0 +1,29 @@
+<mat-list *ngIf="ObjectTodos.length" class="todo-list">
+<mat-card>
+
+
+  <mat-list-item *ngFor="let task of ObjectTodos"
+                 class="todo-item" [ngClass]="{'todo-item-completed' : task.completed}">
+    <mat-checkbox class="checkbox" [(ngModel)]="task.completed" >
+      <span class="title">{{ task.title }}</span>
+    </mat-checkbox>
+
+    <div class="actions">
+      <button mat-icon-button class="icon"  [routerLink]="'item/'+task.id"  >
+        <i class="material-icons">open_in_new</i>
+      </button>
+
+      <button mat-icon-button class="icon"  (click)="onDelete(task)" >
+        <i class="material-icons">delete</i>
+      </button>
+    </div>
+
+    <mat-divider></mat-divider>
+  </mat-list-item>
+
+
+</mat-card>
+</mat-list>
+
+
+<router-outlet></router-outlet>

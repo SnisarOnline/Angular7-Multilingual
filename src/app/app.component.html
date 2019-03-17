@@ -1,0 +1,16 @@
+<header>
+  <img src="favicon.ico" alt="Angular img">
+  <h1> Angular 4!  {{'HEADER.title' | translate}} </h1>
+  <app-switch-language style="margin-left: 10px"></app-switch-language>
+  <a mat-raised-button
+     color='primary'
+     routerLink="/auth/logout"
+     style="margin-left: 20px"
+  >{{'HEADER.btn' | translate}}</a>
+</header>
+
+<router-outlet></router-outlet>
+
+<footer>
+  <a href="https://github.com/SnisarOnline">author: IgorSnisar</a> <br>
+</footer>
