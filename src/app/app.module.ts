@@ -22,13 +22,13 @@ export function HttpLoaderFactory(http: HttpClient) {
       AppRoutingModule,
       SharedModule.forRoot(),
 
-      TranslateModule.forRoot({
-        loader: {
-          provide: TranslateLoader,
-          useFactory: HttpLoaderFactory,
-          deps: [HttpClient],
-        }
-      }),
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory, // можно указать свой путь к папке i18n где находятся файлы с переводом
+        deps: [HttpClient],
+      }
+    }),
   ],
   declarations: [ AppComponent ],
   providers: [
